@@ -1,0 +1,15 @@
+<section class="photoinfo">
+  <div class="photo cf" ng-model="photos">
+  	<h1 class="title">Angular Demo</h1>
+  	<br>
+    <a href="#/details/{{prevItem}}" class="btn btn-left">&lt;</a>
+    <a href="#/details/{{nextItem}}" class="btn btn-right">&gt;</a>
+    <h1>{{photos[whichItem].title}}</h1>
+    <div class="info">
+      <h3>{{photos[whichItem].description}}</h3>
+      <img ng-src="images/{{photos[whichItem].shortname}}.jpg" alt="Photo of {{photos[whichItem].title}}">
+      <div class="tag">{{photos[whichItem].tag}}</div>
+    </div>
+  </div>
+  <a href="index.html">&laquo; Back to search</a>
+</section>

@@ -1,0 +1,21 @@
+<section class="photopage">
+  <div class="search">
+  	<h1 class="title">Angular Demo</h1>
+  	<br>
+   <h1 class="title">Photo Directory</h1>
+    <label>search: </label>
+    <input ng-model="query" type="text" placeholder="Search for photos" autofocus>
+  </div>
+  
+  <ul class="photolist" ng-show="query">
+    <li ng-animate="'animate'" class="photo cf" ng-repeat="item in photos | filter: query | orderBy: ascending">
+      <a href="#/details/{{photos.indexOf(item)}}">
+        <img ng-src="images/{{item.shortname}}.jpg" alt="Photo of {{item.title}}">
+        <div class="info">
+          <h2>{{item.title}}</h2>
+          <h3>{{item.description}}</h3>
+        </div>
+      </a>
+    </li>
+  </ul>  
+</section>
